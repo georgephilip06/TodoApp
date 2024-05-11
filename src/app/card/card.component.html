@@ -1,0 +1,26 @@
+<div class="app_data" >  
+<div *ngIf="!isEdit" class="app-todo">
+    <div  class="app_todo_name">
+      {{this.todoname}}
+    </div>
+    <div class="app_todo_edit">
+      <app-button buttonName="Edit" (click)="this.toggleEdit()"/>
+    </div>
+    <div class="app_todo_delete">
+      <app-button buttonName="Delete" (click)="this.todoService.deteleTodo(this.id)"/>
+    </div>
+  </div>
+
+  <!-- true -->
+  <div *ngIf="isEdit" class="app-todo">
+    <div  class="app_todo_name">
+      <input id={{this.id}} autofocus="on"  value={{this.todoname}}>
+    </div>
+    <div class="app_todo_edit">
+      <app-button buttonName="Save" (click)="this.save()"/>
+    </div>
+    <div class="app_todo_delete">
+      <app-button buttonName="Cancel" (click)="this.toggleEdit()"/>
+    </div>
+  </div>
+</div>

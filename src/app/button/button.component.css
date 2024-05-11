@@ -1,0 +1,9 @@
+.app_todo_button{
+    background-color: rgb(112, 106, 196);
+    border: 0;
+    height: 23px;
+    width: auto;
+    margin-left: 5px;
+    border-radius:5px;
+    transform: skew(-10deg);
+}
